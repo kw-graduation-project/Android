@@ -31,6 +31,11 @@ class MainActivity : AppCompatActivity() {
             btnGallery.setOnClickListener {
                 startActivity(Intent(this@MainActivity, GalleryActivity::class.java))
             }
+
+            btnHistory.setOnClickListener {
+                startActivity(Intent(this@MainActivity, HistoryActivity::class.java))
+            }
+
             btnCamera.setOnClickListener {
                 startActivity(Intent(this@MainActivity, CameraActivity::class.java))
             }
