@@ -2,31 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_gallery"
-        android:layout_width="127dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="200dp"
-        android:text="Page1"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/perfume_list"
+        android:layout_width="409dp"
+        android:layout_height="653dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_camera"
-        android:layout_width="159dp"
-        android:layout_height="94dp"
-        android:text="test button"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="308dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,6 +49,30 @@ class Classifier(private var context: Context, private val modelName: String) {
         return argmax(output)
     }
 
+    fun classify1(image: Bitmap): Pair<String, Float> {
+        inputImage = loadImage(image)
+        val inputs = arrayOf<Any>(inputImage.buffer)
+        val outputs = mutableMapOf<Int, Any>()
+
+        outputs[0] = outputBuffer.buffer.rewind()
+        model.run(inputs, outputs)
+        val output = TensorLabel(labels, outputBuffer).mapWithFloatValue
+        //sortedMapOf(outputs[0],outputs[1])
+       // sortedMapOf(outputs)
+
+        return argmax(output)
+    }
+
+    fun classify2(image: Bitmap): Pair<String, Float> {
+        inputImage = loadImage(image)
+        val inputs = arrayOf<Any>(inputImage.buffer)
+        val outputs = mutableMapOf<Int, Any>()
+        outputs[0] = outputBuffer.buffer.rewind()
+        model.run(inputs, outputs)
+        val output = TensorLabel(labels, outputBuffer).mapWithFloatValue
+        return argmax(output)
+    }
+
     private fun loadImage(bitmap: Bitmap): TensorImage {
         if (bitmap.config != Bitmap.Config.ARGB_8888) {
             inputImage.load(convertBitmapToARGB8888(bitmap))

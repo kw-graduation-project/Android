@@ -25,11 +25,15 @@ public final class Fragment2Binding implements ViewBinding {
   @NonNull
   public final Button btnGallery;
 
+  @NonNull
+  public final ConstraintLayout fragment2;
+
   private Fragment2Binding(@NonNull ConstraintLayout rootView, @NonNull Button btnCamera,
-      @NonNull Button btnGallery) {
+      @NonNull Button btnGallery, @NonNull ConstraintLayout fragment2) {
     this.rootView = rootView;
     this.btnCamera = btnCamera;
     this.btnGallery = btnGallery;
+    this.fragment2 = fragment2;
   }
 
   @Override
@@ -71,7 +75,9 @@ public final class Fragment2Binding implements ViewBinding {
         break missingId;
       }
 
-      return new Fragment2Binding((ConstraintLayout) rootView, btnCamera, btnGallery);
+      ConstraintLayout fragment2 = (ConstraintLayout) rootView;
+
+      return new Fragment2Binding((ConstraintLayout) rootView, btnCamera, btnGallery, fragment2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

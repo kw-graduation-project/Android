@@ -4,10 +4,10 @@ package com.aiden.tflite.tfliteimageclassifier.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.aiden.tflite.tfliteimageclassifier.R;
@@ -20,16 +20,16 @@ public final class Fragment1Binding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnCamera;
+  public final ConstraintLayout fragment1;
 
   @NonNull
-  public final Button btnGallery;
+  public final RecyclerView perfumeList;
 
-  private Fragment1Binding(@NonNull ConstraintLayout rootView, @NonNull Button btnCamera,
-      @NonNull Button btnGallery) {
+  private Fragment1Binding(@NonNull ConstraintLayout rootView, @NonNull ConstraintLayout fragment1,
+      @NonNull RecyclerView perfumeList) {
     this.rootView = rootView;
-    this.btnCamera = btnCamera;
-    this.btnGallery = btnGallery;
+    this.fragment1 = fragment1;
+    this.perfumeList = perfumeList;
   }
 
   @Override
@@ -59,19 +59,15 @@ public final class Fragment1Binding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_camera;
-      Button btnCamera = ViewBindings.findChildViewById(rootView, id);
-      if (btnCamera == null) {
+      ConstraintLayout fragment1 = (ConstraintLayout) rootView;
+
+      id = R.id.perfume_list;
+      RecyclerView perfumeList = ViewBindings.findChildViewById(rootView, id);
+      if (perfumeList == null) {
         break missingId;
       }
 
-      id = R.id.btn_gallery;
-      Button btnGallery = ViewBindings.findChildViewById(rootView, id);
-      if (btnGallery == null) {
-        break missingId;
-      }
-
-      return new Fragment1Binding((ConstraintLayout) rootView, btnCamera, btnGallery);
+      return new Fragment1Binding((ConstraintLayout) rootView, fragment1, perfumeList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

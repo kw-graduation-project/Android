@@ -37,7 +37,7 @@ class HistoryActivity : AppCompatActivity() {
                 String.format(Locale.ENGLISH, "Perfume Name : %s", output.first)
             binding.run {
                 imagePerfume.setImageBitmap(bitmap)
-                editName.setText(resultStr)
+                editName.setText(output.first)
             }
         }
     }

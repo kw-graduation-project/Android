@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,7 +23,22 @@ public final class ActivityHistoryBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button btnSave;
+
+  @NonNull
   public final Button btnSelectPhoto;
+
+  @NonNull
+  public final EditText editCost;
+
+  @NonNull
+  public final EditText editMemo;
+
+  @NonNull
+  public final EditText editName;
+
+  @NonNull
+  public final EditText editScent;
 
   @NonNull
   public final ImageView imagePerfume;
@@ -39,11 +55,18 @@ public final class ActivityHistoryBinding implements ViewBinding {
   @NonNull
   public final TextView textScent;
 
-  private ActivityHistoryBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnSelectPhoto,
-      @NonNull ImageView imagePerfume, @NonNull TextView textCost, @NonNull TextView textMemo,
-      @NonNull TextView textName, @NonNull TextView textScent) {
+  private ActivityHistoryBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnSave,
+      @NonNull Button btnSelectPhoto, @NonNull EditText editCost, @NonNull EditText editMemo,
+      @NonNull EditText editName, @NonNull EditText editScent, @NonNull ImageView imagePerfume,
+      @NonNull TextView textCost, @NonNull TextView textMemo, @NonNull TextView textName,
+      @NonNull TextView textScent) {
     this.rootView = rootView;
+    this.btnSave = btnSave;
     this.btnSelectPhoto = btnSelectPhoto;
+    this.editCost = editCost;
+    this.editMemo = editMemo;
+    this.editName = editName;
+    this.editScent = editScent;
     this.imagePerfume = imagePerfume;
     this.textCost = textCost;
     this.textMemo = textMemo;
@@ -78,9 +101,39 @@ public final class ActivityHistoryBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_save;
+      Button btnSave = ViewBindings.findChildViewById(rootView, id);
+      if (btnSave == null) {
+        break missingId;
+      }
+
       id = R.id.btn_select_photo;
       Button btnSelectPhoto = ViewBindings.findChildViewById(rootView, id);
       if (btnSelectPhoto == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_cost;
+      EditText editCost = ViewBindings.findChildViewById(rootView, id);
+      if (editCost == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_memo;
+      EditText editMemo = ViewBindings.findChildViewById(rootView, id);
+      if (editMemo == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_name;
+      EditText editName = ViewBindings.findChildViewById(rootView, id);
+      if (editName == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_scent;
+      EditText editScent = ViewBindings.findChildViewById(rootView, id);
+      if (editScent == null) {
         break missingId;
       }
 
@@ -114,8 +167,9 @@ public final class ActivityHistoryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityHistoryBinding((ConstraintLayout) rootView, btnSelectPhoto, imagePerfume,
-          textCost, textMemo, textName, textScent);
+      return new ActivityHistoryBinding((ConstraintLayout) rootView, btnSave, btnSelectPhoto,
+          editCost, editMemo, editName, editScent, imagePerfume, textCost, textMemo, textName,
+          textScent);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

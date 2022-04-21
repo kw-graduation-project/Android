@@ -26,5 +26,13 @@
     {
         "merged": "C:\\Users\\gusal\\Android\\perfume-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_1.xml",
         "source": "C:\\Users\\gusal\\Android\\perfume-android\\app\\src\\main\\res\\layout\\fragment_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\gusal\\Android\\perfume-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_weather.xml",
+        "source": "C:\\Users\\gusal\\Android\\perfume-android\\app\\src\\main\\res\\layout\\list_item_weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\gusal\\Android\\perfume-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item.xml",
+        "source": "C:\\Users\\gusal\\Android\\perfume-android\\app\\src\\main\\res\\layout\\list_item.xml"
     }
 ]

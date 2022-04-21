@@ -33,7 +33,7 @@ class GalleryActivity : AppCompatActivity() {
         bitmap?.let {
             val output = classifier.classify(bitmap)
             val resultStr =
-                String.format(Locale.ENGLISH, "Perfume Name : %s, Accuracy : %.2f%%", output.first, output.second * 100)
+                String.format(Locale.ENGLISH, "Name : %s, Accuracy : %.2f%%", output.first, output.second * 100)
             binding.run {
                 imageGallery.setImageBitmap(bitmap)
                 textResult.text = resultStr

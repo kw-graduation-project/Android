@@ -1,23 +1,23 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:35:9-43:20
+INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:41:9-49:20
 	android:grantUriPermissions
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:39:13-47
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:45:13-47
 	android:authorities
 		INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:37:13-60
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:43:13-60
 	android:exported
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:38:13-37
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:44:13-37
 	android:name
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:36:13-62
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:42:13-62
 manifest
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
 MERGED from [androidx.databinding:viewbinding:7.1.2] C:\Users\gusal\.gradle\caches\transforms-3\0ec85a1051d97f26d277f32b0649ba60\transformed\jetified-viewbinding-7.1.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\gusal\.gradle\caches\transforms-3\e54444c07d25fb283a0aedde9b494159\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.material:material:1.4.0] C:\Users\gusal\.gradle\caches\transforms-3\f99eb1d7d0e62f22cdb2be9437700ba7\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\gusal\.gradle\caches\transforms-3\5423c65485a974611bfb437c61e9a2e1\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\gusal\.gradle\caches\transforms-3\73b7a9d841ca96ced803c23978dc95c8\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\gusal\.gradle\caches\transforms-3\38bf5223d4f1a82514dcb305b3a5cf5b\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\187dbc8e5930e92d3497ca5811aad5b8\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -28,7 +28,7 @@ MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\gusal\.gradle\caches\tra
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\gusal\.gradle\caches\transforms-3\80254027b8214a8eee7337b0d05a888c\transformed\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\gusal\.gradle\caches\transforms-3\c7f4788a135e1eabeaf23c93564924d9\transformed\jetified-appcompat-resources-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\3c4f17ecd72583b3a6b7733a292b3a92\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\cef42131e7a9fafdeb0efe3d7363ddd9\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\gusal\.gradle\caches\transforms-3\286cefdc312dd8b0d38d55e09c15a1b4\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\gusal\.gradle\caches\transforms-3\2537510cd9d1f9cd971695449a7cf1ff\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\290daf0007bd16060f850c4dce88c7cb\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\gusal\.gradle\caches\transforms-3\9386fc3a7a94f7a0c1fd818ff20fb1b9\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -40,7 +40,7 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\gusal\.gradle\ca
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\8c86d60e31ecc9b8c6036e7feee09a6a\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\e8d78942842e4749837a1f33ca3e068b\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\a9c2383bb2ce806ea57367759d1e6a43\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\41f1d0ee642e56274fd369eed5d6ed1b\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\gusal\.gradle\caches\transforms-3\b0cbde3fdb6c0db7f9e0e5bbe61fd3f8\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\69dc0a67378ab50538a5a3a6c3578035\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\4f2a58b881e0c15ec73f4ec2d80d6674\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.6.0] C:\Users\gusal\.gradle\caches\transforms-3\4cb1b5a1b05b853580fb9baf5881fb52\transformed\core-1.6.0\AndroidManifest.xml:17:1-26:12
@@ -60,33 +60,41 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\bf11d5f709f8b4982d65ae78eb7a0a6a\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\69a4388af68bad3cfd5a877ec530d9c8\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\gusal\.gradle\caches\transforms-3\4f1a47d5479d4f3d8d4d4695b638601c\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:3:5-53
 		INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:2:11-69
-uses-feature#android.hardware.camera
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:5:5-7:35
-	android:required
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:7:9-32
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:6:5-67
 	android:name
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:6:9-47
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:7:22-76
+uses-feature#android.hardware.camera
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:9:5-11:35
+	android:required
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:11:9-32
+	android:name
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:10:9-47
 application
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:9:5-44:19
-MERGED from [com.google.android.material:material:1.4.0] C:\Users\gusal\.gradle\caches\transforms-3\f99eb1d7d0e62f22cdb2be9437700ba7\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.4.0] C:\Users\gusal\.gradle\caches\transforms-3\f99eb1d7d0e62f22cdb2be9437700ba7\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:13:5-50:19
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\gusal\.gradle\caches\transforms-3\5423c65485a974611bfb437c61e9a2e1\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\gusal\.gradle\caches\transforms-3\5423c65485a974611bfb437c61e9a2e1\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\gusal\.gradle\caches\transforms-3\73b7a9d841ca96ced803c23978dc95c8\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\gusal\.gradle\caches\transforms-3\73b7a9d841ca96ced803c23978dc95c8\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
 MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\gusal\.gradle\caches\transforms-3\0bf2f0dd0ab87a89207e46bca067da3e\transformed\jetified-tensorflow-lite-2.4.0\AndroidManifest.xml:10:5-20
@@ -98,51 +106,53 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\gu
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\gusal\.gradle\caches\transforms-3\4cb1b5a1b05b853580fb9baf5881fb52\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:15:9-59
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:19:9-59
+	android:usesCleartextTraffic
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:20:9-44
 activity#com.aiden.tflite.tfliteimageclassifier.HistoryActivity
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:16:9-18:40
-	android:exported
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:18:13-37
-	android:name
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:17:13-44
-activity#com.aiden.tflite.tfliteimageclassifier.CameraActivity
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:19:9-21:40
-	android:exported
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:21:13-37
-	android:name
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:20:13-43
-activity#com.aiden.tflite.tfliteimageclassifier.GalleryActivity
 ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:22:9-24:40
 	android:exported
 		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
 		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:23:13-44
-activity#com.aiden.tflite.tfliteimageclassifier.MainActivity
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:25:9-33:20
+activity#com.aiden.tflite.tfliteimageclassifier.CameraActivity
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:27:13-36
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:26:13-41
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:26:13-43
+activity#com.aiden.tflite.tfliteimageclassifier.GalleryActivity
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:28:9-30:40
+	android:exported
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:29:13-44
+activity#com.aiden.tflite.tfliteimageclassifier.MainActivity
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:31:9-39:20
+	android:exported
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:33:13-36
+	android:name
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:32:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:28:13-32:29
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:29:17-69
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:29:25-66
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:31:27-74
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:37:27-74
 uses-sdk
 INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
@@ -151,8 +161,8 @@ MERGED from [androidx.databinding:viewbinding:7.1.2] C:\Users\gusal\.gradle\cach
 MERGED from [androidx.databinding:viewbinding:7.1.2] C:\Users\gusal\.gradle\caches\transforms-3\0ec85a1051d97f26d277f32b0649ba60\transformed\jetified-viewbinding-7.1.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\gusal\.gradle\caches\transforms-3\e54444c07d25fb283a0aedde9b494159\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\gusal\.gradle\caches\transforms-3\e54444c07d25fb283a0aedde9b494159\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.material:material:1.4.0] C:\Users\gusal\.gradle\caches\transforms-3\f99eb1d7d0e62f22cdb2be9437700ba7\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.4.0] C:\Users\gusal\.gradle\caches\transforms-3\f99eb1d7d0e62f22cdb2be9437700ba7\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\gusal\.gradle\caches\transforms-3\5423c65485a974611bfb437c61e9a2e1\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\gusal\.gradle\caches\transforms-3\5423c65485a974611bfb437c61e9a2e1\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\gusal\.gradle\caches\transforms-3\73b7a9d841ca96ced803c23978dc95c8\transformed\constraintlayout-2.1.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\gusal\.gradle\caches\transforms-3\73b7a9d841ca96ced803c23978dc95c8\transformed\constraintlayout-2.1.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\gusal\.gradle\caches\transforms-3\38bf5223d4f1a82514dcb305b3a5cf5b\transformed\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
@@ -173,8 +183,8 @@ MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\gusal\.gradl
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\gusal\.gradle\caches\transforms-3\c7f4788a135e1eabeaf23c93564924d9\transformed\jetified-appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\3c4f17ecd72583b3a6b7733a292b3a92\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\3c4f17ecd72583b3a6b7733a292b3a92\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\cef42131e7a9fafdeb0efe3d7363ddd9\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\cef42131e7a9fafdeb0efe3d7363ddd9\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\gusal\.gradle\caches\transforms-3\286cefdc312dd8b0d38d55e09c15a1b4\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\gusal\.gradle\caches\transforms-3\286cefdc312dd8b0d38d55e09c15a1b4\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\gusal\.gradle\caches\transforms-3\2537510cd9d1f9cd971695449a7cf1ff\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\gusal\.gradle\caches\transforms-3\2537510cd9d1f9cd971695449a7cf1ff\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\290daf0007bd16060f850c4dce88c7cb\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
@@ -197,8 +207,8 @@ MERGED from [androidx.loader:loader:1.0.0] C:\Users\gusal\.gradle\caches\transfo
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\e8d78942842e4749837a1f33ca3e068b\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\a9c2383bb2ce806ea57367759d1e6a43\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\a9c2383bb2ce806ea57367759d1e6a43\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\41f1d0ee642e56274fd369eed5d6ed1b\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\41f1d0ee642e56274fd369eed5d6ed1b\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\gusal\.gradle\caches\transforms-3\b0cbde3fdb6c0db7f9e0e5bbe61fd3f8\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\gusal\.gradle\caches\transforms-3\b0cbde3fdb6c0db7f9e0e5bbe61fd3f8\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\69dc0a67378ab50538a5a3a6c3578035\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\69dc0a67378ab50538a5a3a6c3578035\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\gusal\.gradle\caches\transforms-3\4f2a58b881e0c15ec73f4ec2d80d6674\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
@@ -249,8 +259,8 @@ INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifes
 		MERGED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:40:13-42:58
+ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:46:13-48:58
 	android:resource
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:42:17-55
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:48:17-55
 	android:name
-		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:41:17-67
+		ADDED from C:\Users\gusal\Android\perfume-android\app\src\main\AndroidManifest.xml:47:17-67

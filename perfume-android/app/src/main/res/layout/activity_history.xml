@@ -53,10 +53,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="-15dp"
         android:hint="name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_perfume" />
+        app:layout_constraintTop_toTopOf="@+id/text_name" />
 
     <TextView
         android:id="@+id/text_cost"
@@ -73,10 +73,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="-15dp"
         android:hint="cost"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_perfume" />
+        app:layout_constraintTop_toTopOf="@+id/text_cost" />
 
     <TextView
         android:id="@+id/text_scent"
@@ -93,10 +93,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="-15dp"
         android:hint="scent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_perfume" />
+        app:layout_constraintTop_toTopOf="@+id/text_scent" />
 
     <TextView
         android:id="@+id/text_memo"
@@ -113,9 +113,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="-15dp"
         android:hint="memo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_perfume" />
+        app:layout_constraintTop_toTopOf="@+id/text_memo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

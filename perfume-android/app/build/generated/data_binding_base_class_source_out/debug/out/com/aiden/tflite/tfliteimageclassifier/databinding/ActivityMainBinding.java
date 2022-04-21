@@ -12,6 +12,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import androidx.viewpager2.widget.ViewPager2;
 import com.aiden.tflite.tfliteimageclassifier.R;
+import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -30,15 +31,24 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnHistory;
 
   @NonNull
+  public final ConstraintLayout mainlayout;
+
+  @NonNull
   public final ViewPager2 pager;
 
+  @NonNull
+  public final TabLayout tabLayout;
+
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCamera,
-      @NonNull Button btnGallery, @NonNull Button btnHistory, @NonNull ViewPager2 pager) {
+      @NonNull Button btnGallery, @NonNull Button btnHistory, @NonNull ConstraintLayout mainlayout,
+      @NonNull ViewPager2 pager, @NonNull TabLayout tabLayout) {
     this.rootView = rootView;
     this.btnCamera = btnCamera;
     this.btnGallery = btnGallery;
     this.btnHistory = btnHistory;
+    this.mainlayout = mainlayout;
     this.pager = pager;
+    this.tabLayout = tabLayout;
   }
 
   @Override
@@ -86,14 +96,22 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      ConstraintLayout mainlayout = (ConstraintLayout) rootView;
+
       id = R.id.pager;
       ViewPager2 pager = ViewBindings.findChildViewById(rootView, id);
       if (pager == null) {
         break missingId;
       }
 
+      id = R.id.tabLayout;
+      TabLayout tabLayout = ViewBindings.findChildViewById(rootView, id);
+      if (tabLayout == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((ConstraintLayout) rootView, btnCamera, btnGallery, btnHistory,
-          pager);
+          mainlayout, pager, tabLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
