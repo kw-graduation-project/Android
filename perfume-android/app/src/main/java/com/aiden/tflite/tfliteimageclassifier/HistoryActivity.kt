@@ -1,5 +1,6 @@
 package com.aiden.tflite.tfliteimageclassifier
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.ImageDecoder
 import android.net.Uri
@@ -9,14 +10,22 @@ import android.provider.MediaStore
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.room.Room
 import com.aiden.tflite.tfliteimageclassifier.databinding.ActivityGalleryBinding
 import com.aiden.tflite.tfliteimageclassifier.databinding.ActivityHistoryBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.io.IOException
 import java.util.*
 
+
 class HistoryActivity : AppCompatActivity() {
+
     private val binding by lazy { ActivityHistoryBinding.inflate(layoutInflater, null, false) }
     private lateinit var classifier: Classifier
+
+
     private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { url: Uri? ->
         val selectedImage = url ?: return@registerForActivityResult
         var bitmap: Bitmap? = null
@@ -49,6 +58,30 @@ class HistoryActivity : AppCompatActivity() {
         binding.run {
             btnSelectPhoto.setOnClickListener {
                 getContent.launch("image/*")
+            }
+
+            btnSave.setOnClickListener {
+                val name = editName.text.toString()
+                val cost = editCost.text.toString()
+                val scent = editScent.text.toString()
+                val memo = editMemo.text.toString()
+
+                // 싱글톤?
+                /*val newPerfume = User(name, cost, scent,memo)
+
+                val db = UserDatabase.getInstance(applicationContext)!!
+
+                CoroutineScope(Dispatchers.IO).launch {
+                    db.userDao().insert(newPerfume)
+                }*/
+
+                val db = Room.databaseBuilder(
+                    applicationContext, UserDatabase::class.java, "user.db"
+                ).allowMainThreadQueries().build()
+                //Toast.makeText(this, name, Toast.LENGTH_SHORT).show()
+
+                db.userDao().insert(User(name, cost, scent,memo))
+                startActivity(Intent(this@HistoryActivity, MainActivity::class.java))
             }
         }
     }

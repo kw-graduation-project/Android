@@ -2,13 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aiden.tflite.tfliteimageclassifier">
 
-
-    <uses-permission android:name="android.permission.INTERNET" /> // 기상청 api 사용
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
+
 
     <application
         android:allowBackup="true"
@@ -17,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TFLiteImageClassifier"
-        android:usesCleartextTraffic="true"> // 기상청 api 사용
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name=".HistoryActivity"
@@ -48,4 +48,5 @@
                 android:resource="@xml/provider_paths" />
         </provider>
     </application>
+
 </manifest>

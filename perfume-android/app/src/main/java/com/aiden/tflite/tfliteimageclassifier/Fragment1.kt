@@ -29,15 +29,15 @@ class Fragment1 : Fragment() {
     ): View? {
 
         val rootView = inflater.inflate(R.layout.fragment_1, container, false)
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이",13000,"향기로움"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"안나수이",15000,"시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이",15000,"시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"안나수이",15000,"시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이",15000,"시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"안나수이",15000,"시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이",15000,"시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"안나수이",15000,"시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이",15000,"시트러스"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"랑밤","15000","시트러스"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"랑밤","15000","시트러스"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"랑밤","15000","시트러스"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"랑밤","15000","시트러스"))
+        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
 
         recyclerView1 = rootView.findViewById(R.id.perfume_list!!)as RecyclerView
         recyclerView1.layoutManager = LinearLayoutManager(requireContext())

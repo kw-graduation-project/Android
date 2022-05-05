@@ -1,6 +1,7 @@
 package com.aiden.tflite.tfliteimageclassifier
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils.replace
 import android.util.Log
@@ -8,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -17,8 +19,11 @@ import androidx.viewpager2.widget.ViewPager2
 import com.aiden.tflite.tfliteimageclassifier.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.gson.GsonBuilder
 import retrofit2.Call
 import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -29,14 +34,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tabLayout : TabLayout
     //private lateinit var fragmentManager : FragmentManager
 
-    // api
-    lateinit var weatherRecyclerView : RecyclerView
 
-    private var base_date = "20210510"  // 발표 일자
-    private var base_time = "1400"      // 발표 시각
-    private var nx = "55"               // 예보지점 X 좌표
-    private var ny = "127"              // 예보지점 Y 좌표
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -48,8 +48,9 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+
         // 실행가능코드
-        //
+        // 뷰페이져에 프래그먼트 넣기
         binding.pager.adapter = ViewPagerAdapter(this)
 
         TabLayoutMediator(binding.tabLayout, binding.pager) {tab, position ->
@@ -75,19 +76,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
         // api
-
-        val tvDate = findViewById<TextView>(R.id.tvDate)          // 오늘 날짜 텍스트뷰
-
-        // 오류 발생 -> null 값?
-        weatherRecyclerView = findViewById<RecyclerView>(R.id.weatherRecyclerView)  // 날씨 리사이클러 뷰
-        val btnRefresh = findViewById<Button>(R.id.btnRefresh)
-
-        // 리사이클러 뷰 매니저 설정
-        weatherRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
-
-        // 오늘 날짜 텍스트뷰 설정
-        tvDate.text = SimpleDateFormat("MM월 dd일", Locale.getDefault()).format(Calendar.getInstance().time) + "날씨"
+        /*
+        tvRainRatio = findViewById(R.id.tvRainRatio)
+        tvRainType = findViewById(R.id.tvRainType)
+        tvHumidity = findViewById(R.id.tvHumidity)
+        tvSky = findViewById(R.id.tvSky)
+        tvTemp = findViewById(R.id.tvTemp)
+        btnRefresh = findViewById(R.id.btnRefresh)
 
         // nx, ny지점의 날씨 가져와서 설정하기
         setWeather(nx, ny)
@@ -95,28 +92,29 @@ class MainActivity : AppCompatActivity() {
         // <새로고침> 버튼 누를 때 날씨 정보 다시 가져오기
         btnRefresh.setOnClickListener {
             setWeather(nx, ny)
-        }
+        }*/
+
     }
 
-    // 날씨 가져와서 설정하기
-    private fun setWeather(nx : String, ny : String) {
+    /*
+    fun setWeather(nx : String, ny : String) {
         // 준비 단계 : base_date(발표 일자), base_time(발표 시각)
         // 현재 날짜, 시간 정보 가져오기
         val cal = Calendar.getInstance()
         base_date = SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(cal.time) // 현재 날짜
-        val timeH = SimpleDateFormat("HH", Locale.getDefault()).format(cal.time) // 현재 시각
-        val timeM = SimpleDateFormat("HH", Locale.getDefault()).format(cal.time) // 현재 분
+        val time = SimpleDateFormat("HH", Locale.getDefault()).format(cal.time) // 현재 시간
         // API 가져오기 적당하게 변환
-        base_time = getBaseTime(timeH, timeM)
-        // 현재 시각이 00시이고 45분 이하여서 baseTime이 2330이면 어제 정보 받아오기
-        if (timeH == "00" && base_time == "2330") {
+        base_time = getTime(time)
+        // 동네예보  API는 3시간마다 현재시간+4시간 뒤의 날씨 예보를 알려주기 때문에
+        // 현재 시각이 00시가 넘었다면 어제 예보한 데이터를 가져와야함
+        if (base_time >= "2000") {
             cal.add(Calendar.DATE, -1).toString()
             base_date = SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(cal.time)
         }
 
         // 날씨 정보 가져오기
-        // (한 페이지 결과 수 = 60, 페이지 번호 = 1, 응답 자료 형식-"JSON", 발표 날싸, 발표 시각, 예보지점 좌표)
-        val call = ApiObject.retrofitService.GetWeather(60, 1, "JSON", base_date, base_time, nx, ny)
+        // (응답 자료 형식-"JSON", 한 페이지 결과 수 = 10, 페이지 번호 = 1, 발표 날싸, 발표 시각, 예보지점 좌표)
+        val call = ApiObject.retrofitService.GetWeather("JSON", 10, 1, base_date, base_time, nx, ny)
 
         // 비동기적으로 실행하기
         call.enqueue(object : retrofit2.Callback<WEATHER> {
@@ -124,31 +122,26 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<WEATHER>, response: Response<WEATHER>) {
                 if (response.isSuccessful) {
                     // 날씨 정보 가져오기
-                    val it: List<ITEM> = response.body()!!.response.body.items.item
+                    var it: List<ITEM> = response.body()!!.response.body.items.item
 
-                    // 현재 시각부터 1시간 뒤의 날씨 6개를 담을 배열
-                    val weatherArr = arrayOf(ModelWeather(), ModelWeather(), ModelWeather(), ModelWeather(), ModelWeather(), ModelWeather())
-
-                    // 배열 채우기
-                    var index = 0
-                    val totalCount = response.body()!!.response.body.totalCount - 1
-                    for (i in 0..totalCount) {
-                        index %= 6
+                    var rainRatio = ""      // 강수 확률
+                    var rainType = ""       // 강수 형태
+                    var humidity = ""       // 습도
+                    var sky = ""            // 하능 상태
+                    var temp = ""           // 기온
+                    for (i in 0..9) {
                         when(it[i].category) {
-                            "PTY" -> weatherArr[index].rainType = it[i].fcstValue     // 강수 형태
-                            "REH" -> weatherArr[index].humidity = it[i].fcstValue     // 습도
-                            "SKY" -> weatherArr[index].sky = it[i].fcstValue          // 하늘 상태
-                            "T1H" -> weatherArr[index].temp = it[i].fcstValue         // 기온
+                            "POP" -> rainRatio = it[i].fcstValue    // 강수 기온
+                            "PTY" -> rainType = it[i].fcstValue     // 강수 형태
+                            "REH" -> humidity = it[i].fcstValue     // 습도
+                            "SKY" -> sky = it[i].fcstValue          // 하늘 상태
+                            "T3H" -> temp = it[i].fcstValue         // 기온
                             else -> continue
                         }
-                        index++
+
                     }
-
-                    // 각 날짜 배열 시간 설정
-                    for (i in 0..5) weatherArr[i].fcstTime = it[i].fcstTime
-
-                    // 리사이클러 뷰에 데이터 연결
-                    weatherRecyclerView.adapter = WeatherAdapter(weatherArr)
+                    // 날씨 정보 텍스트뷰에 보이게 하기
+                    setWeather(rainRatio, rainType, humidity, sky, temp)
 
                     // 토스트 띄우기
                     Toast.makeText(applicationContext, it[0].fcstDate + ", " + it[0].fcstTime + "의 날씨 정보입니다.", Toast.LENGTH_SHORT).show()
@@ -157,34 +150,59 @@ class MainActivity : AppCompatActivity() {
 
             // 응답 실패 시
             override fun onFailure(call: Call<WEATHER>, t: Throwable) {
-                val tvError = findViewById<TextView>(R.id.tvError)
-                tvError.text = "api fail : " +  t.message.toString() + "\n 다시 시도해주세요."
-                tvError.visibility = View.VISIBLE
                 Log.d("api fail", t.message.toString())
             }
         })
     }
 
-    // baseTime 설정하기
-    private fun getBaseTime(h : String, m : String) : String {
+    // 텍스트 뷰에 날씨 정보 보여주기
+    fun setWeather(rainRatio : String, rainType : String, humidity : String, sky : String, temp : String) {
+        // 강수 확률
+        tvRainRatio.text = rainRatio + "%"
+        // 강수 형태
         var result = ""
-
-        // 45분 전이면
-        if (m.toInt() < 45) {
-            // 0시면 2330
-            if (h == "00") result = "2330"
-            // 아니면 1시간 전 날씨 정보 부르기
-            else {
-                var resultH = h.toInt() - 1
-                // 1자리면 0 붙여서 2자리로 만들기
-                if (resultH < 10) result = "0" + resultH + "30"
-                // 2자리면 그대로
-                else result = resultH.toString() + "30"
-            }
+        when(rainType) {
+            "0" -> result = "없음"
+            "1" -> result = "비"
+            "2" -> result = "비/눈"
+            "3" -> result = "눈"
+            "4" -> result = "소나기"
+            "5" -> result = "빗방울"
+            "6" -> result = "빗방울/눈날림"
+            "7" -> result = "눈날림"
+            else -> "오류"
         }
-        // 45분 이후면 바로 정보 받아오기
-        else result = h + "30"
-
-        return result
+        tvRainType.text = result
+        // 습도
+        tvHumidity.text = humidity + "%"
+        // 하능 상태
+        result = ""
+        when(sky) {
+            "1" -> result = "맑음"
+            "3" -> result = "구름 많음"
+            "4" -> result = "흐림"
+            else -> "오류"
+        }
+        tvSky.text = result
+        // 온도
+        tvTemp.text = temp + "°"
     }
+
+    // 시간 설정하기
+    // 동네 예보 API는 3시간마다 현재시각+4시간 뒤의 날씨 예보를 보여줌
+    // 따라서 현재 시간대의 날씨를 알기 위해서는 아래와 같은 과정이 필요함. 자세한 내용은 함께 제공된 파일 확인
+    fun getTime(time : String) : String {
+        var result = ""
+        when(time) {
+            in "00".."02" -> result = "2000"    // 00~02
+            in "03".."05" -> result = "2300"    // 03~05
+            in "06".."08" -> result = "0200"    // 06~08
+            in "09".."11" -> result = "0500"    // 09~11
+            in "12".."14" -> result = "0800"    // 12~14
+            in "15".."17" -> result = "1100"    // 15~17
+            in "18".."20" -> result = "1400"    // 18~20
+            else -> result = "1700"             // 21~23
+        }
+        return result
+    }*/
 }
