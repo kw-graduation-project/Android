@@ -29,15 +29,19 @@ class Fragment1 : Fragment() {
     ): View? {
 
         val rootView = inflater.inflate(R.layout.fragment_1, container, false)
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"랑밤","15000","시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"랑밤","15000","시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"랑밤","15000","시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume10,"랑밤","15000","시트러스"))
-        perfume_DataArray.add(Perfumes(R.drawable.perfume2,"안나수이","13000","향기로움"))
+        perfume_DataArray.add(Perfumes(R.drawable.diptyque_doson,"딥디크_도손","149,000","튜베로즈 핑크페퍼"))
+        perfume_DataArray.add(Perfumes(R.drawable.lelabo_santal,"르라보_상탈","144,410","샌달우드 암브록산"))
+        perfume_DataArray.add(Perfumes(R.drawable.maison_margiela,"마르지엘라_커피브레이크","51,880","웜스파이시 머스크"))
+        perfume_DataArray.add(Perfumes(R.drawable.byredo_gypsywater,"바이레도_집시워터","123,400","소나무가지 오리스"))
+        perfume_DataArray.add(Perfumes(R.drawable.chanel_bluede,"샤넬_블루 드","87,850","시더우드 베티버"))
+        perfume_DataArray.add(Perfumes(R.drawable.acqua_di_parma_mirto,"아쿠아디파르마_미르토","64,990","바질 베르가못"))
+        perfume_DataArray.add(Perfumes(R.drawable.hermes_un,"에르메스_운 자르뎅 수르닐","51,870","자몽 캐롯 로터스"))
+        perfume_DataArray.add(Perfumes(R.drawable.aesop_thesset,"이솝_테싯","137,950","유자 베티버 바질"))
+        perfume_DataArray.add(Perfumes(R.drawable.jomalone_neroli,"조말론_네롤리","78,910","바질 삼나무 네롤리"))
+        perfume_DataArray.add(Perfumes(R.drawable.johnbarbatos_artisan,"존바바토스_아티산 ","39,940","화이트 아이리스 오렌지"))
+        perfume_DataArray.add(Perfumes(R.drawable.creed_royalwater,"크리드_로얄워터 ","260,360","버베나 레몬 바질"))
+        perfume_DataArray.add(Perfumes(R.drawable.tomford_white,"톰포드_화이트 ","178,940","스웨이드 머스크 앰버"))
+
 
         recyclerView1 = rootView.findViewById(R.id.perfume_list!!)as RecyclerView
         recyclerView1.layoutManager = LinearLayoutManager(requireContext())

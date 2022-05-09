@@ -34,18 +34,6 @@ class Fragment2 : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        /*
-        val userList  = db.userDao().getAll()
-
-        if(userList != null) {
-            for (i in userList) {
-                name = i.name
-                cost = i.cost
-                scent = i.scent
-                memo = i.memo
-                user_DataArray.add(Perfumes(R.drawable.perfume2, name, cost, scent))
-            }
-        }*/
     }
 
     override fun onCreateView(

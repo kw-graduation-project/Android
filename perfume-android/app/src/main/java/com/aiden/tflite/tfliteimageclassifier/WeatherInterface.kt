@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface WeatherInterface {
     // getVilageFcst : 단기예보조회
     // @Headers("Content-Type: application/json")
-    @GET("getVilageFcst?serviceKey=Dwvax%2F04xQuRp%2B%2FihP1EsxsSHdSkFIohALltjAJSiDpPv4xZLVlIxp0ABvuOyeYNqYkLJAVgymQjVbNtioS%2FXA%3D%3D")
+    @GET("getVilageFcst?serviceKey=서비스키")
 
     fun GetWeather(@Query("numOfRows") num_of_rows : Int,
                    @Query("pageNo") page_no : Int,

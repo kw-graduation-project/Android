@@ -46,7 +46,7 @@ class Fragment3 : Fragment() {
     lateinit var iv_imageview : ImageView          // 향수사진
     lateinit var tv_name : TextView        // 향수이름
 
-    private var basedate = "20220503"  // 발표 일자
+    private var basedate = "20220509"  // 발표 일자
     private var basetime = "0500"      // 발표 시각
     private var nx = 55               // 예보지점 X 좌표
     private var ny = 127               // 예보지점 Y 좌표
@@ -91,16 +91,18 @@ class Fragment3 : Fragment() {
         // 준비 단계 : base_date(발표 일자), base_time(발표 시각)
         // 현재 날짜, 시간 정보 가져오기
         val cal = Calendar.getInstance()
+        Log.d("ALL",cal.time.toString())
+
         basedate = SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(cal.time) // 현재 날짜
         //val time = SimpleDateFormat("HH", Locale.getDefault()).format(cal.time) // 현재 시간
         val timeH = SimpleDateFormat("HH", Locale.getDefault()).format(cal.time) // 현재 시각
-        val timeM = SimpleDateFormat("HH", Locale.getDefault()).format(cal.time) // 현재 분
+        val timeM = SimpleDateFormat("mm", Locale.getDefault()).format(cal.time) // 현재 분
 
         // API 가져오기 적당하게 변환
         // 02:00 이후로 3시간 간격 시간만 데이터 받아옴
-        // 05:00 으로 시간 고정
 
         basetime = getTime(timeH)
+
         // 동네예보  API는 3시간마다 현재시간+4시간 뒤의 날씨 예보를 알려주기 때문에
         // 현재 시각이 00시가 넘었다면 어제 예보한 데이터를 가져와야함
         if (timeH == "00" && basetime == "2330") {
@@ -188,22 +190,22 @@ class Fragment3 : Fragment() {
         // 봄 가을
         if(temp.toInt() in 5..20)
         {
-            iv_imageview.setImageResource(R.drawable.background1)
-            tv_name.text = "봄가을향수"
+            iv_imageview.setImageResource(R.drawable.diptyque_doson)
+            tv_name.text = "딥디크도손"
         }
 
         // 여름
         if(temp.toInt() > 20)
         {
-            iv_imageview.setImageResource(R.drawable.background2)
-            tv_name.text = "여름"
+            iv_imageview.setImageResource(R.drawable.chanel_bluede)
+            tv_name.text = "샤넬블루드"
         }
 
         // 겨울
         if(temp.toInt() < 5)
         {
-            iv_imageview.setImageResource(R.drawable.background3)
-            tv_name.text = "겨울"
+            iv_imageview.setImageResource(R.drawable.lelabo_santal)
+            tv_name.text = "르라보상탈"
         }
 
         tvTemp.text = temp + "°"
