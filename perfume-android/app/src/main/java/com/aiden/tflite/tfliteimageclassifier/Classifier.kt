@@ -99,7 +99,7 @@ class Classifier(private var context: Context, private val modelName: String) {
     }
 
     companion object {
-        const val IMAGENET_CLASSIFY_MODEL = "perfume1_model.tflite"
+        const val IMAGENET_CLASSIFY_MODEL = "perfume.tflite"
         const val LABEL_FILE = "perfume_list"
     }
 }

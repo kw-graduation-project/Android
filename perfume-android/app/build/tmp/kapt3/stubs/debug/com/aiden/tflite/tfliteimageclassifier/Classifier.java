@@ -16,7 +16,7 @@ public final class Classifier {
     @org.jetbrains.annotations.NotNull()
     public static final com.aiden.tflite.tfliteimageclassifier.Classifier.Companion Companion = null;
     @org.jetbrains.annotations.NotNull()
-    public static final java.lang.String IMAGENET_CLASSIFY_MODEL = "perfume1_model.tflite";
+    public static final java.lang.String IMAGENET_CLASSIFY_MODEL = "perfume.tflite";
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String LABEL_FILE = "perfume_list";
     
