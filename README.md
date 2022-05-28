@@ -4,6 +4,10 @@
 playstore 링크 : https://play.google.com/store/apps/details?id=com.hyeon.tflite.tfliteimageclassifier
 </p>
 
+<p>
+ver.1 유튜브 링크 : https://youtu.be/xVt53d0Z_h4
+</p>
+
 
 1. 모델변환 (테스트 완료)
 2. 카메라 기능 구현 (구현 완료)
