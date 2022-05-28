@@ -1,7 +1,7 @@
 # Android
 
 <h1>playstore 링크</h1>
-https://play.google.com/store/apps/details?id=com.hyeon.tflite.tfliteimageclassifier
+<p>https://play.google.com/store/apps/details?id=com.hyeon.tflite.tfliteimageclassifier</p>
 
 
 1. 모델변환 (테스트 완료)
