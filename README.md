@@ -1,8 +1,7 @@
 # Android
 
 <p>
-## playstore 링크
-https://play.google.com/store/apps/details?id=com.hyeon.tflite.tfliteimageclassifier
+playstore 링크 : https://play.google.com/store/apps/details?id=com.hyeon.tflite.tfliteimageclassifier
 </p>
 
 
